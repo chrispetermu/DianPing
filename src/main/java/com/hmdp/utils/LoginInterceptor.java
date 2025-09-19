@@ -48,7 +48,7 @@ public class LoginInterceptor implements HandlerInterceptor{
 
         UserHolder.saveUser(userDTO);
 
-       stringRedisTemplate.expire(key,RedisConstants.LOGIN_USER_TTL, TimeUnit.MINUTES);
+        stringRedisTemplate.expire(key,RedisConstants.LOGIN_USER_TTL, TimeUnit.MINUTES);
 
 
         return true;
